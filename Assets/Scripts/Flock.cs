@@ -7,7 +7,7 @@ public class Flock : MonoBehaviour
 {
     [Header("Refs")]
     public FlockAgent agentPrefab;
-    public FlockBehavior flockBehavior;
+    public FlockBehaviour flockBehavior;
 
     [Header("Settings")]
     [Range(10, 1000)]
