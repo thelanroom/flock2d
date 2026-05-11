@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Composite Behaviours
   m_EditorClassIdentifier: Assembly-CSharp::CompositeBehaviours
   behaviours:
-  - {fileID: 11400000, guid: 986e0b18068ec7940aaae6ce6af379ba, type: 2}
+  - {fileID: 11400000, guid: 264f8b0422526c949ad759f964029b32, type: 2}
   - {fileID: 11400000, guid: ba8eb336f88ecf943980c09d6b0d6358, type: 2}
   - {fileID: 11400000, guid: 5d08fe34798c94444948bec8f17f0943, type: 2}
+  - {fileID: 11400000, guid: 31c87e1341ef8924a8b4d55143575552, type: 2}
   weights:
   - 4
   - 1
+  - 2
   - 1

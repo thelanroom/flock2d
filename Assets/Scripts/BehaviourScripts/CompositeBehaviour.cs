@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Flock/Behaviour/Composite")]
-public class CompositeBehaviours : FlockBehaviour
+public class CompositeBehaviour : FlockBehaviour
 {
     public FlockBehaviour[] behaviours;
     public float[] weights;
@@ -18,8 +18,7 @@ public class CompositeBehaviours : FlockBehaviour
         var move = Vector2.zero;
 
         for (int i = 0; i < behaviours.Length; i++)
-        {
-            {
+        {           
                 var partialMove = behaviours[i].CalculateMove(flockAgent, context, flock) * weights[i];
 
                 if (partialMove != Vector2.zero)
@@ -32,8 +31,6 @@ public class CompositeBehaviours : FlockBehaviour
 
                     move += partialMove;
                 }
-            }
-
         }
 
         return move;    

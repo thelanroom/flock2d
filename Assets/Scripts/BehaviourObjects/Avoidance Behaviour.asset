@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 614b602e9aff5ad45a15104a846c213f, type: 3}
   m_Name: Avoidance Behaviour
   m_EditorClassIdentifier: Assembly-CSharp::AvoidanceBehaviour
+  filter: {fileID: 11400000, guid: 7c7bd018afecdfc408ff7a878f9582f4, type: 2}

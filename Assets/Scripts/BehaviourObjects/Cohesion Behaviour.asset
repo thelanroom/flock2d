@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0647fd95a9e1897499627d647b2d2c7e, type: 3}
   m_Name: Cohesion Behaviour
   m_EditorClassIdentifier: Assembly-CSharp::CohesionBehaviour
+  filter: {fileID: 11400000, guid: ccc44dc756a1be44e835c7a333785c6a, type: 2}

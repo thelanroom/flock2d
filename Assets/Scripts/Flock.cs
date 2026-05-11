@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.Rendering.Universal;
 
 public class Flock : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Flock : MonoBehaviour
     public FlockBehaviour flockBehavior;
 
     [Header("Settings")]
-    [Range(10, 1000)]
+    [Range(1, 1000)]
     public int startingSize = 100;
     public const float agentDensity = 0.08f;
     [Range(1f, 100f)]
@@ -30,7 +28,7 @@ public class Flock : MonoBehaviour
     private List<FlockAgent> _agents = new();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         _squareMaxSpeed = maxSpeed * maxSpeed;
         _squareNeighborRadius = neighborRadius * neighborRadius;
@@ -40,12 +38,13 @@ public class Flock : MonoBehaviour
         {
             var newAgent = Instantiate(
                 agentPrefab,
-                Random.insideUnitCircle * startingSize * agentDensity,
+                agentDensity * startingSize * Random.insideUnitCircle,
                 Quaternion.Euler(Vector3.forward * Random.Range(0f, 360f)),
                 transform
                 );
 
             newAgent.name = "Agent " + i;
+            newAgent.Initialize(this);
             _agents.Add(newAgent);
         }
     }

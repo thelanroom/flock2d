@@ -5,6 +5,8 @@ public class FlockAgent : MonoBehaviour
 {
     public static float RotationSpeed =180;
     Collider2D _agentCollider;
+
+    public Flock ParentFlock { get; private set;  }
     public Collider2D AgentCollider {  get { return _agentCollider; } }
     public SpriteRenderer SpriteRenderer { get; private set;  }
 
@@ -13,6 +15,11 @@ public class FlockAgent : MonoBehaviour
     {
         _agentCollider = GetComponent<Collider2D>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    public void Initialize(Flock flock)
+    {
+        ParentFlock = flock;
     }
 
     public void Move(Vector2 velocity)

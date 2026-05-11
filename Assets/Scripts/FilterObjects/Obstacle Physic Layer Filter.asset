@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5634b88fc3f3d499fc4773f9cbac11, type: 3}
-  m_Name: Alignment Behaviour
-  m_EditorClassIdentifier: Assembly-CSharp::AlignmentBehaviour
-  filter: {fileID: 11400000, guid: ccc44dc756a1be44e835c7a333785c6a, type: 2}
+  m_Script: {fileID: 11500000, guid: 8582ab25c571beb4fb9c41c3c2b3307f, type: 3}
+  m_Name: Obstacle Physic Layer Filter
+  m_EditorClassIdentifier: Assembly-CSharp::PhysicLayerFilter
+  mask:
+    serializedVersion: 2
+    m_Bits: 192
